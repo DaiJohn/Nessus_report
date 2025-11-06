@@ -1,0 +1,8 @@
+# Crontab - scheduler settings
+
+# Redirecting logs
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+#Every 5 min to run
+*/5 * * * * root /app/venv/bin/python /app/nessus_report.py >> /logs/cron.log 2>&1
