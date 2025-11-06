@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  cronjob:
+    container_name: nessus-cron
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./logs:/logs
+      - ./reports:/reports
+    env_file:
+      - .env
